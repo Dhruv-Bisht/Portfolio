@@ -331,6 +331,10 @@ p{ margin: 0 0 1em; color: var(--muted); max-width: 62ch; }
 .sonar-blip:hover .sonar-label{ fill: var(--text); }
 .sonar-center{ fill: var(--panel-2); stroke: var(--line-strong); }
 
+@media (max-width: 780px){
+  .sonar{ display: none; }
+}
+
 /* ---------------- Section shell ---------------- */
 section{ padding: 90px 0; border-top: 1px solid var(--line); }
 .section-head{
