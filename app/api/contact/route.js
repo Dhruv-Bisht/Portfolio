@@ -1,6 +1,6 @@
 // This runs as a Node.js serverless function on Vercel.
-// Swap the console.log below for a real email provider
-// (Resend, Nodemailer + SMTP, SendGrid, etc.) when you deploy.
+// Sends the message via Resend. Requires a RESEND_API_KEY environment
+// variable set in your Vercel project settings.
 
 export async function POST(request) {
   try {
@@ -10,19 +10,35 @@ export async function POST(request) {
       return Response.json({ ok: false, error: 'Name, email, and message are all required.' }, { status: 400 });
     }
 
-    // TODO: send an actual email. Example with Resend:
-    // await fetch('https://api.resend.com/emails', {
-    //   method: 'POST',
-    //   headers: { Authorization: `Bearer ${process.env.RESEND_API_KEY}`, 'Content-Type': 'application/json' },
-    //   body: JSON.stringify({
-    //     from: 'portfolio@yourdomain.com',
-    //     to: 'dhruvbist123@gmail.com',
-    //     subject: `New message from ${name}`,
-    //     text: message,
-    //   }),
-    // });
+    const apiKey = process.env.RESEND_API_KEY;
+    if (!apiKey) {
+      console.error('RESEND_API_KEY is not set — message not sent:', { name, email, message });
+      return Response.json(
+        { ok: false, error: 'Email service is not configured yet.' },
+        { status: 500 }
+      );
+    }
 
-    console.log('New contact message:', { name, email, message });
+    const res = await fetch('https://api.resend.com/emails', {
+      method: 'POST',
+      headers: {
+        Authorization: `Bearer ${apiKey}`,
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({
+        from: 'Portfolio Contact <onboarding@resend.dev>',
+        to: 'dhruvbist123@gmail.com',
+        reply_to: email,
+        subject: `New message from ${name}`,
+        text: `From: ${name} <${email}>\n\n${message}`,
+      }),
+    });
+
+    if (!res.ok) {
+      const errBody = await res.text();
+      console.error('Resend API error:', res.status, errBody);
+      return Response.json({ ok: false, error: 'Could not send the message.' }, { status: 502 });
+    }
 
     return Response.json({ ok: true });
   } catch (err) {

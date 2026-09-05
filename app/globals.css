@@ -43,6 +43,7 @@ body{
 @media (prefers-reduced-motion: reduce){
   html{ scroll-behavior: auto; }
   *, *::before, *::after{ animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; transition-duration: 0.01ms !important; }
+  .sonar-sweep-group{ animation-duration: 5.5s !important; animation-iteration-count: infinite !important; }
 }
 
 /* Faint depth-gradient wash behind everything, like light falling off underwater */

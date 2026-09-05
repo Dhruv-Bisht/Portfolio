@@ -160,7 +160,7 @@ export default function ProjectsPage() {
             <div className="meta">
               <span className="id">MISSION 05</span>
               <h3>resumeFut</h3>
-              <span className="period">In progress</span>
+              <span className="period">Completed</span>
             </div>
             <div className="body">
               <p style={{ maxWidth: '65ch' }}>

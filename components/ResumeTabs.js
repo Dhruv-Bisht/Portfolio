@@ -69,11 +69,18 @@ export default function ResumeTabs() {
             </p>
           </div>
           <div className="timeline-item">
-            <span className="t-date mono">ONGOING</span>
-            <h4>DORA &amp; resumeFut</h4>
+            <span className="t-date mono">COMPLETED</span>
+            <h4>resumeFut</h4>
             <p>
-              Concept builds in robot fleet allocation and AI-assisted resume tooling — see the Projects page for
-              live demos.
+              AI-assisted resume tool — parses a candidate&rsquo;s experience and tailors it against a target role,
+              suggesting concrete edits. See the Projects page for the live demo.
+            </p>
+          </div>
+          <div className="timeline-item">
+            <span className="t-date mono">ONGOING</span>
+            <h4>DORA</h4>
+            <p>
+              Concept build in robot fleet allocation — see the Projects page for the live demo.
             </p>
           </div>
         </div>
