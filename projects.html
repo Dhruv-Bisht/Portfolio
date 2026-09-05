@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Projects — Dhruv Singh Bisht</title>
+<meta name="description" content="Projects by Dhruv Singh Bisht: autonomous underwater vehicle, DORA robot fleet allocation simulator, spam detection classifier, cricket tournament platform, and resumeFut.">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+
+<div class="depth-rail" aria-hidden="true">
+  <div class="track"><div class="fill"></div></div>
+  <div class="marks">
+    <span>0M</span><span>-40M</span><span>-90M</span><span>-140M</span>
+  </div>
+</div>
+
+<header class="site-header">
+  <div class="wrap">
+    <a href="index.html" class="brand"><span class="blip"></span> DHRUV SINGH BISHT</a>
+    <nav class="main-nav">
+      <a href="index.html">Home</a>
+      <a href="projects.html" class="active">Projects</a>
+      <a href="resume.html">Resume</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <div style="display:flex; align-items:center; gap:14px;">
+      <span class="status-pill"><span class="dot"></span> UV ENTHUSIAST · ONLINE</span>
+      <button class="nav-toggle" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</header>
+
+<main>
+  <section style="padding-top:64px; border-top:none;">
+    <div class="wrap">
+      <span class="eyebrow">MISSION LOG</span>
+      <h1 style="margin-top:14px; font-size:clamp(2rem,4vw,2.8rem); max-width:18ch;">Five builds, one thread: autonomy under uncertainty.</h1>
+      <p style="margin-top:16px; max-width:60ch;">Each project below either senses its environment, allocates resources under constraints, or automates a workflow end-to-end. Two of them — DORA and the spam classifier — have live demos built into the page.</p>
+    </div>
+  </section>
+
+  <!-- ============== AUV ============== -->
+  <section id="auv">
+    <div class="wrap">
+      <div class="project-card" style="margin:0; padding:0;">
+        <div class="meta">
+          <span class="id">MISSION 01</span>
+          <h3>Autonomous Underwater Vehicle</h3>
+          <span class="period">Aug 2025 – Mar 2026</span>
+        </div>
+        <div class="body">
+          <ul>
+            <li>Engineered an AUV by integrating 5 hardware modules using Jetson Orin Nano and Pixhawk.</li>
+            <li>Implemented real-time obstacle detection and depth monitoring for autonomous navigation using Ping Sonar.</li>
+            <li>Controlled 4 thrusters through MAVLink and PyMAVLink communication for stable underwater maneuvering.</li>
+          </ul>
+          <div class="stack"><span>Jetson Orin Nano</span><span>Pixhawk</span><span>MAVLink</span><span>PyMAVLink</span><span>Ping Sonar</span></div>
+
+          <div class="demo-panel" id="auv-diagram">
+            <div class="demo-head"><span><span class="dot"></span>THRUSTER &amp; SENSOR LAYOUT</span><span>click a node</span></div>
+            <div class="demo-body">
+              <svg viewBox="0 0 400 240" style="width:100%; max-width:420px; display:block; margin:0 auto;">
+                <ellipse cx="200" cy="120" rx="150" ry="60" fill="none" stroke="var(--line-strong)" stroke-width="1.5"/>
+                <circle data-thruster="fwd_left" class="active-node" cx="90" cy="80" r="12" fill="var(--panel-2)" stroke="var(--accent)" stroke-width="2" style="cursor:pointer;"/>
+                <circle data-thruster="fwd_right" cx="90" cy="160" r="12" fill="var(--panel-2)" stroke="var(--line-strong)" stroke-width="2" style="cursor:pointer;"/>
+                <circle data-thruster="aft_left" cx="310" cy="80" r="12" fill="var(--panel-2)" stroke="var(--line-strong)" stroke-width="2" style="cursor:pointer;"/>
+                <circle data-thruster="aft_right" cx="310" cy="160" r="12" fill="var(--panel-2)" stroke="var(--line-strong)" stroke-width="2" style="cursor:pointer;"/>
+                <rect data-thruster="compute" x="176" y="104" width="48" height="32" rx="4" fill="var(--panel-2)" stroke="var(--line-strong)" stroke-width="2" style="cursor:pointer;"/>
+                <circle data-thruster="sonar" cx="200" cy="60" r="10" fill="var(--panel-2)" stroke="var(--line-strong)" stroke-width="2" style="cursor:pointer;"/>
+                <text x="90" y="65" text-anchor="middle" class="sonar-label" font-size="10">FWD-L</text>
+                <text x="90" y="185" text-anchor="middle" class="sonar-label" font-size="10">FWD-R</text>
+                <text x="310" y="65" text-anchor="middle" class="sonar-label" font-size="10">AFT-L</text>
+                <text x="310" y="185" text-anchor="middle" class="sonar-label" font-size="10">AFT-R</text>
+                <text x="200" y="150" text-anchor="middle" class="sonar-label" font-size="10">COMPUTE</text>
+                <text x="200" y="45" text-anchor="middle" class="sonar-label" font-size="10">SONAR</text>
+              </svg>
+              <p id="auv-spec-out" class="mono" style="text-align:center; color:var(--accent); font-size:0.82rem; margin-top:10px;">Forward-left thruster — pitch &amp; yaw trim, driven via PyMAVLink servo output.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============== DORA ============== -->
+  <section id="dora">
+    <div class="wrap">
+      <div class="project-card" style="margin:0; padding:0;">
+        <div class="meta">
+          <span class="id">MISSION 02</span>
+          <h3>DORA</h3>
+          <span class="period">Concept build</span>
+        </div>
+        <div class="body">
+          <p style="max-width:70ch; color:var(--muted);">Data-driven Optimized Robot Allocation for a dark factory floor. DORA is a decision-support tool focused on <strong style="color:var(--text); font-weight:500;">dynamic fleet sizing</strong>: it takes incoming task demand and average task duration, simulates the load against the current robot fleet, and raises an availability alert before the fleet falls behind — all demonstrated here on synthetic data.</p>
+          <div class="stack"><span>Simulation</span><span>Fleet Sizing</span><span>Availability Alerts</span><span>Synthetic Data</span></div>
+
+          <div class="demo-panel" id="dora-demo">
+            <div class="demo-head"><span><span class="dot"></span>LIVE SIMULATION</span><span>synthetic data</span></div>
+            <div class="demo-body">
+              <div class="demo-grid">
+                <div>
+                  <div class="field">
+                    <label>Task demand <span class="val" id="dora-demand-val">40 tasks/hr</span></label>
+                    <input type="range" id="dora-demand" min="10" max="120" value="40" step="1">
+                  </div>
+                  <div class="field">
+                    <label>Avg. task duration <span class="val" id="dora-duration-val">6 min</span></label>
+                    <input type="range" id="dora-duration" min="1" max="20" value="6" step="1">
+                  </div>
+                  <div class="field">
+                    <label>Fleet size <span class="val" id="dora-fleet-val">6 robots</span></label>
+                    <input type="range" id="dora-fleet" min="1" max="20" value="6" step="1">
+                  </div>
+
+                  <div class="readout">
+                    <div class="cell" id="dora-util-cell"><div class="label">UTILIZATION</div><div class="num" id="dora-util">—</div></div>
+                    <div class="cell"><div class="label">SUGGESTED FLEET</div><div class="num" id="dora-suggested">—</div></div>
+                    <div class="cell"><div class="label">BUFFER</div><div class="num" id="dora-buffer">—</div></div>
+                  </div>
+                  <div class="util-bar"><div class="fill" id="dora-util-fill" style="width:0%;"></div></div>
+                  <div class="alert-msg ok" id="dora-alert">Adjust the sliders to simulate fleet load.</div>
+                </div>
+                <div>
+                  <div class="chart-wrap">
+                    <svg id="dora-chart"></svg>
+                  </div>
+                  <p class="chart-note">Synthetic demand across 12 shifts, plotted against the current fleet's sustainable throughput (dashed line).</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============== Cricket Platform ============== -->
+  <section id="cricket">
+    <div class="wrap">
+      <div class="project-card" style="margin:0; padding:0;">
+        <div class="meta">
+          <span class="id">MISSION 03</span>
+          <h3>Cricket Tournament Management Platform</h3>
+          <span class="period">Dec 2025 – Feb 2026</span>
+        </div>
+        <div class="body">
+          <ul>
+            <li>Full-stack tournament management platform supporting 100+ player registrations and team administration.</li>
+            <li>Designed a MySQL database of 5 relational tables for players, teams, auctions, and match records.</li>
+            <li>Automated auction and squad management workflows using Flask, JavaScript, and MySQL.</li>
+          </ul>
+          <div class="stack"><span>Flask</span><span>JavaScript</span><span>MySQL</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============== Spam Detection ============== -->
+  <section id="spam">
+    <div class="wrap">
+      <div class="project-card" style="margin:0; padding:0;">
+        <div class="meta">
+          <span class="id">MISSION 04</span>
+          <h3>Spam Detection Website</h3>
+          <span class="period">Sep 2025 – Nov 2025</span>
+        </div>
+        <div class="body">
+          <ul>
+            <li>NLP-based spam detection system trained on 30,000+ email samples from the Enron dataset.</li>
+            <li>Achieved 96% classification accuracy using TF-IDF vectorization and Multinomial Naive Bayes.</li>
+            <li>Flask web application capable of classifying email messages in real time.</li>
+          </ul>
+          <div class="stack"><span>NLP</span><span>TF-IDF</span><span>Naive Bayes</span><span>Flask</span></div>
+
+          <div class="demo-panel" id="spam-demo">
+            <div class="demo-head"><span><span class="dot"></span>TRY THE CONCEPT</span><span>simplified client-side demo</span></div>
+            <div class="demo-body">
+              <textarea class="demo-input" id="spam-input" placeholder="Paste an email snippet, e.g. 'CONGRATULATIONS! You are a WINNER — click here to claim your free prize now!!!'"></textarea>
+              <div style="margin-top:12px; display:flex; align-items:center; gap:14px;">
+                <button class="btn primary" id="spam-classify">Classify message</button>
+                <div class="classify-result" id="spam-result"><span class="tag ham">—</span> enter a message to classify</div>
+              </div>
+              <p class="chart-note" style="margin-top:12px;">This in-browser demo uses a lightweight keyword heuristic to illustrate the idea — the deployed Flask app runs the trained TF-IDF + Naive Bayes model instead.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============== resumeFut ============== -->
+  <section id="resumefut">
+    <div class="wrap">
+      <div class="project-card" style="margin:0; padding:0;">
+        <div class="meta">
+          <span class="id">MISSION 05</span>
+          <h3>resumeFut</h3>
+          <span class="period">In progress</span>
+        </div>
+        <div class="body">
+          <p style="max-width:65ch;">An AI-assisted resume tool concept — parsing a candidate's experience and tailoring it against a target role, then suggesting concrete edits rather than generic advice.</p>
+          <div class="stack"><span>Python</span><span>NLP</span></div>
+          <p class="chart-note" style="margin-top:6px;">Placeholder summary — send over the real description and I'll swap this in.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div><p class="footer-log">MISSION LOG — always building toward systems that can operate with partial information and no hand-holding.</p></div>
+    <div class="footer-links">
+      <a href="mailto:dhruvbist123@gmail.com">Email</a>
+      <a href="tel:+916397666874">Phone</a>
+      <a href="#" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="#" target="_blank" rel="noopener">GitHub</a>
+      <a href="#" target="_blank" rel="noopener">LeetCode</a>
+    </div>
+  </div>
+  <div class="wrap footer-bottom">
+    <span>© 2026 Dhruv Singh Bisht</span>
+    <span>DEPTH: 0M · STATUS: ONLINE</span>
+  </div>
+</footer>
+
+<script src="assets/main.js"></script>
+</body>
+</html>
