@@ -29,10 +29,6 @@ export default function ContactPage() {
                 <a href="mailto:dhruvbist123@gmail.com">dhruvbist123@gmail.com</a>
               </li>
               <li>
-                <span className="k">PHONE</span>
-                <a href="tel:+916397666874">+91 63976 66874</a>
-              </li>
-              <li>
                 <span className="k">LINKEDIN</span>
                 <a href="#" target="_blank" rel="noopener noreferrer">
                   linkedin.com/in/dhruvsinghbisht
@@ -40,14 +36,14 @@ export default function ContactPage() {
               </li>
               <li>
                 <span className="k">GITHUB</span>
-                <a href="#" target="_blank" rel="noopener noreferrer">
-                  github.com/dhruvsinghbisht
+                <a href="https://github.com/Dhruv-Bisht" target="_blank" rel="noopener noreferrer">
+                  github.com/Dhruv-Bisht
                 </a>
               </li>
               <li>
                 <span className="k">LEETCODE</span>
-                <a href="#" target="_blank" rel="noopener noreferrer">
-                  leetcode.com/dhruvsinghbisht
+                <a href="https://leetcode.com/dhruvbist2306" target="_blank" rel="noopener noreferrer">
+                  leetcode.com/dhruvbist2306
                 </a>
               </li>
               <li>
@@ -56,8 +52,7 @@ export default function ContactPage() {
               </li>
             </ul>
             <p style={{ maxWidth: '48ch' }}>
-              Update the placeholder profile links above with your real LinkedIn, GitHub, and LeetCode URLs before
-              deploying.
+              LinkedIn link coming soon — swap in the real URL once you have it.
             </p>
           </div>
 

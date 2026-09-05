@@ -11,14 +11,13 @@ export default function Footer() {
         </div>
         <div className="footer-links">
           <a href="mailto:dhruvbist123@gmail.com">Email</a>
-          <a href="tel:+916397666874">Phone</a>
           <a href="#" target="_blank" rel="noopener noreferrer">
             LinkedIn
           </a>
-          <a href="#" target="_blank" rel="noopener noreferrer">
+          <a href="https://github.com/Dhruv-Bisht" target="_blank" rel="noopener noreferrer">
             GitHub
           </a>
-          <a href="#" target="_blank" rel="noopener noreferrer">
+          <a href="https://leetcode.com/dhruvbist2306" target="_blank" rel="noopener noreferrer">
             LeetCode
           </a>
         </div>

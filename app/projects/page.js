@@ -93,7 +93,7 @@ export default function ProjectsPage() {
           <div className="project-card" style={{ margin: 0, padding: 0 }}>
             <div className="meta">
               <span className="id">MISSION 03</span>
-              <h3>Cricket Tournament Management Platform</h3>
+              <h3>NPL — Cricket Tournament Management Platform</h3>
               <span className="period">Dec 2025 – Feb 2026</span>
             </div>
             <div className="body">
@@ -110,6 +110,11 @@ export default function ProjectsPage() {
               <div className="stack">
                 <span>Flask</span><span>JavaScript</span><span>MySQL</span>
               </div>
+              <p style={{ marginTop: 12 }}>
+                <a className="btn primary" href="https://npl-website-iota.vercel.app" target="_blank" rel="noopener noreferrer">
+                  Live demo ↗
+                </a>
+              </p>
             </div>
           </div>
         </div>
@@ -162,31 +167,6 @@ export default function ProjectsPage() {
               </p>
               <p className="chart-note" style={{ marginTop: 6 }}>
                 Placeholder summary — send over the real description and I&rsquo;ll swap this in.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section id="npl">
-        <div className="wrap">
-          <div className="project-card" style={{ margin: 0, padding: 0 }}>
-            <div className="meta">
-              <span className="id">MISSION 06</span>
-              <h3>NPL Website</h3>
-              <span className="period">In progress</span>
-            </div>
-            <div className="body">
-              <p style={{ maxWidth: '65ch' }}>
-                A website built for NPL.
-              </p>
-              <p style={{ marginTop: 12 }}>
-                <a className="btn primary" href="https://npl-website-iota.vercel.app" target="_blank" rel="noopener noreferrer">
-                  Live demo ↗
-                </a>
-              </p>
-              <p className="chart-note" style={{ marginTop: 6 }}>
-                Placeholder summary — send over the real description and stack and I&rsquo;ll swap this in.
               </p>
             </div>
           </div>
