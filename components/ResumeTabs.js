@@ -79,31 +79,44 @@ export default function ResumeTabs() {
             </div>
           </div>
           <div className="skill-group">
-            <h4>FRAMEWORKS</h4>
+            <h4>WEB &amp; BACKEND</h4>
             <div className="chips">
-              <span>Flask</span><span>FastAPI</span><span>React.js</span><span>Node.js</span><span>Bootstrap</span>
+              <span>React.js</span><span>Node.js</span><span>Flask</span><span>FastAPI</span>
             </div>
           </div>
           <div className="skill-group">
             <h4>AI / ML</h4>
             <div className="chips">
-              <span>Machine Learning</span><span>Deep Learning</span><span>NLP</span><span>Transformers</span>
+              <span>Deep Learning</span><span>Natural Language Processing</span>
+            </div>
+          </div>
+          <div className="skill-group">
+            <h4>GENERATIVE AI</h4>
+            <div className="chips">
+              <span>Transformers</span><span>LLMs</span><span>RAG</span>
+            </div>
+          </div>
+          <div className="skill-group">
+            <h4>DATABASES &amp; CACHING</h4>
+            <div className="chips">
+              <span>MySQL</span><span>PostgreSQL</span><span>Redis</span>
             </div>
           </div>
           <div className="skill-group">
             <h4>CLOUD &amp; DEVOPS</h4>
             <div className="chips">
-              <span>AWS</span><span>Docker</span>
+              <span>AWS</span><span>Docker</span><span>Kubernetes</span>
             </div>
           </div>
           <div className="skill-group">
-            <h4>DATABASES</h4>
+            <h4>CORE CS</h4>
             <div className="chips">
-              <span>MySQL</span><span>MongoDB</span>
+              <span>Data Structures &amp; Algorithms</span><span>OOP</span><span>DBMS</span>
+              <span>Operating Systems</span><span>Computer Networks</span><span>System Design</span>
             </div>
           </div>
           <div className="skill-group">
-            <h4>TOOLS</h4>
+            <h4>TOOLS &amp; SYSTEMS</h4>
             <div className="chips">
               <span>Git</span><span>GitHub</span><span>Linux</span><span>MAVLink</span>
             </div>
