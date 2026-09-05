@@ -76,6 +76,11 @@ export default function ProjectsPage() {
                 <span>Simulation</span><span>Fleet Sizing</span><span>Availability Alerts</span>
                 <span>Synthetic Data</span>
               </div>
+              <p style={{ marginTop: 12 }}>
+                <a className="btn primary" href="https://dora-phi-ruby.vercel.app" target="_blank" rel="noopener noreferrer">
+                  Live demo ↗
+                </a>
+              </p>
 
               <DoraDemo />
             </div>
@@ -150,8 +155,38 @@ export default function ProjectsPage() {
               <div className="stack">
                 <span>Python</span><span>NLP</span>
               </div>
+              <p style={{ marginTop: 12 }}>
+                <a className="btn primary" href="https://resumefut.vercel.app" target="_blank" rel="noopener noreferrer">
+                  Live demo ↗
+                </a>
+              </p>
               <p className="chart-note" style={{ marginTop: 6 }}>
                 Placeholder summary — send over the real description and I&rsquo;ll swap this in.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="npl">
+        <div className="wrap">
+          <div className="project-card" style={{ margin: 0, padding: 0 }}>
+            <div className="meta">
+              <span className="id">MISSION 06</span>
+              <h3>NPL Website</h3>
+              <span className="period">In progress</span>
+            </div>
+            <div className="body">
+              <p style={{ maxWidth: '65ch' }}>
+                A website built for NPL.
+              </p>
+              <p style={{ marginTop: 12 }}>
+                <a className="btn primary" href="https://npl-website-iota.vercel.app" target="_blank" rel="noopener noreferrer">
+                  Live demo ↗
+                </a>
+              </p>
+              <p className="chart-note" style={{ marginTop: 6 }}>
+                Placeholder summary — send over the real description and stack and I&rsquo;ll swap this in.
               </p>
             </div>
           </div>
