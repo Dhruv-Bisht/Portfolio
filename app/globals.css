@@ -6,8 +6,6 @@
    alert signal.
    ============================================================ */
 
-@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap');
-
 :root{
   --bg: #0A141F;
   --panel: #0F1D2B;
@@ -520,6 +518,9 @@ textarea.demo-input{
 .classify-result .tag{ padding: 4px 10px; border-radius: 3px; font-weight: 500; }
 .classify-result .tag.spam{ background: rgba(255,107,107,0.15); color: var(--red); }
 .classify-result .tag.ham{ background: rgba(73,224,196,0.15); color: var(--accent); }
+
+#auv-diagram [data-thruster]{ transition: stroke 0.2s ease; }
+#auv-diagram .active-node{ stroke: var(--accent) !important; }
 
 #auv-diagram [data-thruster]{ transition: stroke 0.2s ease; }
 #auv-diagram .active-node{ stroke: var(--accent) !important; }
