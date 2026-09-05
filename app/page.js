@@ -190,16 +190,16 @@ export default function HomePage() {
             <div className="project-card">
               <div className="meta">
                 <span className="id">MISSION 03</span>
-                <h3>Spam Detection System</h3>
-                <span className="period">Sep 2025 – Nov 2025</span>
+                <h3>NPL — Cricket Tournament Management Platform</h3>
+                <span className="period">Dec 2025 – Feb 2026</span>
               </div>
               <div className="body">
                 <p>
-                  NLP-based classifier trained on 30,000+ Enron email samples, reaching 96% accuracy with TF-IDF
-                  vectorization and Multinomial Naive Bayes, served through a real-time Flask app.
+                  Full-stack tournament management platform supporting 100+ player registrations, team
+                  administration, and automated auction and squad management workflows.
                 </p>
                 <div className="stack">
-                  <span>NLP</span><span>TF-IDF</span><span>Naive Bayes</span><span>Flask</span>
+                  <span>Flask</span><span>JavaScript</span><span>MySQL</span>
                 </div>
               </div>
             </div>

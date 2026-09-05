@@ -30,8 +30,8 @@ export default function ContactPage() {
               </li>
               <li>
                 <span className="k">LINKEDIN</span>
-                <a href="#" target="_blank" rel="noopener noreferrer">
-                  linkedin.com/in/dhruvsinghbisht
+                <a href="https://www.linkedin.com/in/dhruv-bisht-90907a348" target="_blank" rel="noopener noreferrer">
+                  linkedin.com/in/dhruv-bisht-90907a348
                 </a>
               </li>
               <li>
@@ -42,8 +42,8 @@ export default function ContactPage() {
               </li>
               <li>
                 <span className="k">LEETCODE</span>
-                <a href="https://leetcode.com/dhruvbist2306" target="_blank" rel="noopener noreferrer">
-                  leetcode.com/dhruvbist2306
+                <a href="https://leetcode.com/u/dhruvbisht2306/" target="_blank" rel="noopener noreferrer">
+                  leetcode.com/u/dhruvbisht2306
                 </a>
               </li>
               <li>
@@ -51,9 +51,6 @@ export default function ContactPage() {
                 <span className="v">Bangalore, Karnataka, India</span>
               </li>
             </ul>
-            <p style={{ maxWidth: '48ch' }}>
-              LinkedIn link coming soon — swap in the real URL once you have it.
-            </p>
           </div>
 
           <ContactForm />

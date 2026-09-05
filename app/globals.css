@@ -296,6 +296,13 @@ p{ margin: 0 0 1em; color: var(--muted); max-width: 62ch; }
 }
 .hero .cta-row{ display: flex; gap: 12px; flex-wrap: wrap; }
 
+@media (max-width: 780px){
+  .hero .wrap{ grid-template-columns: 1fr; }
+  .hero h1{ font-size: clamp(2.6rem, 9vw, 3.4rem); }
+  .hero .lede{ font-size: 1.15rem; max-width: 60ch; }
+  .hero .tags span{ font-size: 0.85rem; padding: 7px 12px; }
+}
+
 /* Sonar sweep visual */
 .sonar{
   position: relative;

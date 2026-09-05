@@ -48,6 +48,11 @@ export default function ProjectsPage() {
                 <span>Jetson Orin Nano</span><span>Pixhawk</span><span>MAVLink</span><span>PyMAVLink</span>
                 <span>Ping Sonar</span>
               </div>
+              <p style={{ marginTop: 12 }}>
+                <a className="btn primary" href="https://github.com/Dhruv-Bisht/AUV-ML-System" target="_blank" rel="noopener noreferrer">
+                  View on GitHub ↗
+                </a>
+              </p>
 
               <AuvDiagram />
             </div>
@@ -111,7 +116,7 @@ export default function ProjectsPage() {
                 <span>Flask</span><span>JavaScript</span><span>MySQL</span>
               </div>
               <p style={{ marginTop: 12 }}>
-                <a className="btn primary" href="https://npl-website-iota.vercel.app" target="_blank" rel="noopener noreferrer">
+                <a className="btn primary" href="https://npl-website-one.vercel.app/" target="_blank" rel="noopener noreferrer">
                   Live demo ↗
                 </a>
               </p>
@@ -137,6 +142,11 @@ export default function ProjectsPage() {
               <div className="stack">
                 <span>NLP</span><span>TF-IDF</span><span>Naive Bayes</span><span>Flask</span>
               </div>
+              <p style={{ marginTop: 12 }}>
+                <a className="btn primary" href="https://github.com/Dhruv-Bisht/spam-detection" target="_blank" rel="noopener noreferrer">
+                  View on GitHub ↗
+                </a>
+              </p>
 
               <SpamDemo />
             </div>

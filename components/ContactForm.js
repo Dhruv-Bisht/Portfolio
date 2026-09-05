@@ -39,15 +39,15 @@ export default function ContactForm() {
     <form className="console-form" onSubmit={handleSubmit}>
       <div className="field-row">
         <label htmlFor="c-name">NAME</label>
-        <input type="text" id="c-name" name="name" value={form.name} onChange={handleChange} required />
+        <input type="text" id="c-name" name="name" placeholder="Your name" value={form.name} onChange={handleChange} required />
       </div>
       <div className="field-row">
         <label htmlFor="c-email">EMAIL</label>
-        <input type="email" id="c-email" name="email" value={form.email} onChange={handleChange} required />
+        <input type="email" id="c-email" name="email" placeholder="you@example.com" value={form.email} onChange={handleChange} required />
       </div>
       <div className="field-row">
         <label htmlFor="c-msg">MESSAGE</label>
-        <textarea id="c-msg" name="message" value={form.message} onChange={handleChange} required></textarea>
+        <textarea id="c-msg" name="message" placeholder="What would you like to talk about?" value={form.message} onChange={handleChange} required></textarea>
       </div>
       <button type="submit" className="btn primary" style={{ width: '100%', justifyContent: 'center' }} disabled={status === 'sending'}>
         {status === 'sending' ? 'Transmitting…' : 'Transmit message →'}
@@ -61,12 +61,6 @@ export default function ContactForm() {
       {status === 'error' && (
         <p className="form-note" style={{ color: 'var(--red)' }}>
           {errorMsg} Try emailing directly instead.
-        </p>
-      )}
-      {status === 'idle' && (
-        <p className="form-note">
-          Submits to a Node.js API route (app/api/contact) running as a Vercel serverless function. Wire in an
-          email provider there to actually deliver messages.
         </p>
       )}
     </form>

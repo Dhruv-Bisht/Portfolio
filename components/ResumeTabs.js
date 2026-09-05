@@ -36,11 +36,20 @@ export default function ResumeTabs() {
             </p>
           </div>
           <div className="timeline-item">
+            <span className="t-date mono">AUG 2025</span>
+            <h4>Joined NeptuneX</h4>
+            <p>
+              Joined NeptuneX, the college&rsquo;s autonomous systems club, where the AUV AI System below was
+              developed.
+            </p>
+          </div>
+          <div className="timeline-item">
             <span className="t-date mono">AUG 2025 — MAR 2026</span>
             <h4>Autonomous Underwater Vehicle (AUV) AI System</h4>
             <p>
               Led the Machine Learning team at NeptuneX Club; integrated 5 hardware modules on Jetson Orin Nano and
-              Pixhawk with real-time obstacle detection and 4-thruster control via MAVLink.
+              Pixhawk with real-time obstacle detection and 4-thruster control via MAVLink. Competed with the AUV
+              at SAUVC (Singapore AUV Challenge).
             </p>
           </div>
           <div className="timeline-item">
